@@ -99,4 +99,6 @@ extension NumX on num {
 
   /// responsive height
   double get h => SizeUtils.instance.setHeight(toDouble());
+
+  double get sp => SizeUtils.instance.setSp(this);
 }

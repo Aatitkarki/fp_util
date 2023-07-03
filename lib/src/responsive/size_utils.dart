@@ -19,13 +19,29 @@ class SizeUtils {
 
   static SizeUtils get instance => SizeUtils._();
 
+  ///scale width
+  late double _scaleWidth;
+
+  ///scale height
+  late double _scaleHeight;
+
+  ///text scale factor
+  late double _textScaleFactor;
+
   /// default figma size
   Size _designSize = const Size(375, 812);
 
   /// must call this if your figma design is different
-  /// call this function on root of app
-  void updateDesignSize(Size figmaSize) {
-    _designSize = figmaSize;
+  void init({
+    required BoxConstraints constraints,
+    Size? designSize,
+  }) {
+    designSize ??= _designSize;
+    final width = constraints.maxWidth;
+    final height = constraints.maxHeight;
+    _scaleWidth = width / designSize.width;
+    _scaleHeight = height / designSize.height;
+    _textScaleFactor = _scaleWidth;
   }
 
   /// size
@@ -63,6 +79,8 @@ class SizeUtils {
     if (!_initialized) throw Exception('SizeUtils not initialized.');
     return (px * _height) / (_designSize.height - 44);
   }
+
+  double setSp(num sp) => sp * _textScaleFactor;
 
   /// get responsive size
   double getSize(double px) {
