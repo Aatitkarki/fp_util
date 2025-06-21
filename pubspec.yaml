@@ -18,18 +18,18 @@ dependencies:
   flutter:
     sdk: flutter
 
-  mime: ^1.0.5
+  mime: ^2.0.0
 
   # image picker
-  image_picker: ^1.1.0
+  image_picker: ^1.1.2
 
   # file picker
-  file_picker: ^8.0.3
+  file_picker: ^10.2.0
 
   # svg
-  flutter_svg: ^2.0.10+1
+  flutter_svg: ^2.2.0
 
-  freezed_annotation: ^2.4.1
+  freezed_annotation: ^3.0.0
   json_annotation: ^4.9.0
 
   path: ">=1.8.0 <2.0.0"
@@ -51,11 +51,11 @@ dependencies:
 
   ansicolor: ^2.0.2
 
-  fp_logger: ^1.0.0
+  fp_logger: ^2.0.0
 
 dev_dependencies:
-  flutter_lints: ^3.0.2
-  freezed: ^2.5.2
+  flutter_lints: ^6.0.0
+  freezed: ^3.0.6
   json_serializable: ^6.8.0
   build_runner: ^2.4.9
 
