@@ -20,12 +20,13 @@ part of 'form.dart';
 /// [autoValidate] is used to validate mark field as pure on every change
 ///
 /// {@endtemplate}
-@Freezed(
-  genericArgumentFactories: true,
-  map: FreezedMapOptions.none,
-  when: FreezedWhenOptions.none,
-)
-class Field<T> with _$Field<T> {
+// @Freezed(
+//   genericArgumentFactories: true,
+//   map: FreezedMapOptions.none,
+//   when: FreezedWhenOptions.none,
+// )
+@Freezed(genericArgumentFactories: true,)
+sealed class Field<T> with _$Field<T> {
   const Field._();
 
   /// {@macro field}

@@ -6,7 +6,8 @@ part of 'form.dart';
 ///
 /// {@endtemplate}
 
-@Freezed(map: FreezedMapOptions.none, genericArgumentFactories: true)
+// @Freezed(map: FreezedMapOptions.none, genericArgumentFactories: true)
+@Freezed()
 sealed class FormStatus<T> with _$FormStatus<T> {
   const FormStatus._();
 
